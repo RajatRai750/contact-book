@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Contact</title>
+</head>
+<body>
+<h1>
+    <a href="{{url_for('index')}}">Home</a>
+    <a href="{{url_for('table')}}">Contact Table</a>
+    <a href="{{url_for('add')}}">Add Contact</a>
+    <a href="{{url_for('delete')}}">Delete Contact</a>
+    <a href="{{url_for('update')}}">Update Contact</a>
+    <a href="{{url_for('search')}}">Search Contact</a>
+    <a href="{{url_for('sort')}}">Sort Contact</a>
+</h1>
+
+<h1>Add Contact</h1>
+
+{%- for category, message in get_flashed_messages(with_categories = true) %}
+         <div>
+             <h2>{{ message }}</h2>
+         </div>
+ {%- endfor %}
+
+
+<form action="{{url_for('addthankyou')}}" method = "post" enctype="multipart/form-data">
+
+    <label for="name"><b>Name :</b></label>
+    <input type="text" name="name"/><br><br>
+    <label for="number"><b>Number :</b></label>
+    <input type="text" name="number"/><br><br>
+    <label for="image"><b>Image :</b></label>
+    <input type="file" name="image"/><br><br>
+
+    <input type="submit" value="submit"/>
+</form>
+
+</body>
+</html>

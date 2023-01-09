@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ThankYou</title>
+
+    <style>
+        #myimg{
+        height:100px;
+        width:100px;
+       }
+    </style>
+
+
+</head>
+<body>
+<h1>Thank You Page</h1>
+
+<h2><u>Contact deleted : </u><br>
+    Name:{{name}} <br>
+    Number:{{number}}<br>
+    Image: <img src="static/images/{{image}}" id="myimg"  alt="No image">
+</h2>
+
+<br><br>
+
+<a href="{{url_for('delete')}}">Delete more</a><br>
+<a href="{{url_for('table')}}">view contacts</a><br>
+<a href="{{url_for('index')}}">Home</a>
+
+</body>
+</html>

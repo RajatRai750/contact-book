@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Contact</title>
+</head>
+<body>
+<h1>
+    <a href="{{url_for('index')}}">Home</a>
+    <a href="{{url_for('table')}}">Contact Table</a>
+    <a href="{{url_for('add')}}">Add Contact</a>
+    <a href="{{url_for('delete')}}">Delete Contact</a>
+    <a href="{{url_for('update')}}">Update Contact</a>
+    <a href="{{url_for('search')}}">Search Contact</a>
+    <a href="{{url_for('sort')}}">Sort Contact</a>
+</h1>
+
+<h2>
+    <a href="{{url_for('deletebyid')}}">Delete by Id</a>
+    <a href="{{url_for('deletebyname')}}">Delete by Name</a>
+</h2>
+<br>
+<a href="{{url_for('table')}}">view contacts</a>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort</title>
+
+    <style>
+        #myimg{
+        height:100px;
+        width:100px;
+       }
+    </style>
+
+
+</head>
+<body>
+<h1>
+    <a href="{{url_for('index')}}">Home</a>
+    <a href="{{url_for('table')}}">Contact Table</a>
+    <a href="{{url_for('add')}}">Add Contact</a>
+    <a href="{{url_for('delete')}}">Delete Contact</a>
+    <a href="{{url_for('update')}}">Update Contact</a>
+    <a href="{{url_for('search')}}">Search Contact</a>
+    <a href="{{url_for('sort')}}">Sort Contact</a>
+</h1>
+
+<h2><u>Contacts sorted by their names</u></h2>
+
+<table border = 1>
+    <thread>
+        <td><b>ID</b></td>
+        <td><b>Name</b></td>
+        <td><b>Phone Number</b></td>
+        <td><b>Image</b></td>
+    </thread>
+    {% for i in all %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.number}}</td>
+        <td><img src="static/images/{{i['image']}}" id="myimg"  alt="No image"></td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
